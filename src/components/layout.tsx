@@ -1,12 +1,15 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import base from './base.css'
+import * as React from 'react'
+import './base.css'
 import Container from './container'
 import Navigation from './navigation'
 
-class Template extends React.Component {
+interface Props {
+  location: Location;
+}
+
+class Template extends React.Component<Props> {
   render() {
-    const { location, children } = this.props
+    const {  children } = this.props
     let header
 
     let rootPath = `/`
